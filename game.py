@@ -1,14 +1,14 @@
 import flet as ft
 
 def main(page: ft.Page):
-    mensagem = ft.Text("Escolha o refrigerante certo!")
+    mensagem = ft.Text("Escolha o refrigerante certo!", color="white")
     resposta_correta = "Guaraná"
     
     def verificar_resposta(e):
         if e.control.content == resposta_correta:
-            mensagem.value = "GUARANA"
+            mensagem.value = "GUARANA!"
         else:
-            mensagem.value = "Resposta Errada"     
+            mensagem.value = "Resposta Errada!"     
         page.update()
     
     page.title = "Game: Adivinhe a imagem"
@@ -22,7 +22,8 @@ def main(page: ft.Page):
               ft.Text(
                   "Adivinhe a Imagem",
                   size=24,
-                  weight="bold"    
+                  weight="bold",
+                  color="white"    
                   ),
                   ft.Image(
                       src="images/hornet.jpeg",
